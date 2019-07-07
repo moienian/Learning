@@ -1,6 +1,51 @@
-console.log("App.js is running");
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Indecision</h1>
+        <h2>Put your life in the hands of a computer</h2>
+      </div>
+    );
+  }
+}
 
-var template = <h1>Indecision App</h1>;
-var appRoot = document.getElementById("app");
+class Action extends React.Component {
+  render() {
+    return (
+      <div>
+        <button>What should I do?</button>
+      </div>
+    );
+  }
+}
 
-ReactDOM.render(template, appRoot);
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>Options component here!</h2>
+      </div>
+    );
+  }
+}
+
+class AddOption extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>Add option component here!</h2>
+      </div>
+    );
+  }
+}
+
+const jsx = (
+  <div>
+    <Header />
+    <Action />
+    <Options />
+    <AddOption />
+  </div>
+);
+
+ReactDOM.render(jsx, document.getElementById("app"));
