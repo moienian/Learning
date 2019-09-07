@@ -6,8 +6,18 @@ import counter from "./reducers/index";
 
 const store = createStore(counter);
 
-const onIncrement = () => store.dispatch({ type: "INCREMENT" });
-const onDecrement = () => store.dispatch({ type: "DECREMENT" });
+const incrementCount = ({ incrementBy = 1 } = {}) => ({
+  type: "INCREMENT",
+  incrementBy
+});
+
+const decrementCount = ({ decrementBy = 1 } = {}) => ({
+  type: "DECREMENT",
+  decrementBy
+});
+
+const onIncrement = () => store.dispatch(incrementCount());
+const onDecrement = () => store.dispatch(decrementCount());
 
 const root = document.getElementById("root");
 
