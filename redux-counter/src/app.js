@@ -1,20 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore } from "redux";
 import Counter from "./components/Counter";
-import counter from "./reducers/index";
-
-const store = createStore(counter);
-
-const incrementCount = ({ incrementBy = 1 } = {}) => ({
-  type: "INCREMENT",
-  incrementBy
-});
-
-const decrementCount = ({ decrementBy = 1 } = {}) => ({
-  type: "DECREMENT",
-  decrementBy
-});
+import store from "./store/configureStore";
+import { incrementCount, decrementCount } from "./actions/index";
 
 const onIncrement = () => store.dispatch(incrementCount());
 const onDecrement = () => store.dispatch(decrementCount());
