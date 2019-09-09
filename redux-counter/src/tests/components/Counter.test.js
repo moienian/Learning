@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Counter from "../components/Counter";
+import Counter from "../../components/Counter";
 
 const setup = (value = 0) => {
   const actions = {
