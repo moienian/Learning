@@ -1,19 +1,19 @@
 import counter from "../../reducers/counter";
 
 describe("Counter reducer", () => {
-  it("should provide the initial state", () => {
+  test("should provide the intestial state", () => {
     expect(counter(undefined, {})).toBe(0);
   });
 
-  it("should handle INCREMENT action", () => {
+  test("should handle INCREMENT action", () => {
     expect(counter(1, { type: "INCREMENT" })).toBe(2);
   });
 
-  it("should handle DECREMENT action", () => {
+  test("should handle DECREMENT action", () => {
     expect(counter(1, { type: "DECREMENT" })).toBe(0);
   });
 
-  it("should ignore unknown actions", () => {
+  test("should ignore unknown actions", () => {
     expect(counter(1, { type: "unknown" })).toBe(1);
   });
 });
