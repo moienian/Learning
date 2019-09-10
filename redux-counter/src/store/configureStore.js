@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import counter from "../reducers/index";
+import counter from "../reducers/counter";
 
 const store = createStore(counter);
 

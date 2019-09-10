@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Counter from "./components/Counter";
 import store from "./store/configureStore";
-import { incrementCount, decrementCount } from "./actions/index";
+import { incrementCount, decrementCount } from "./actions/counter";
 
 const onIncrement = () => store.dispatch(incrementCount());
 const onDecrement = () => store.dispatch(decrementCount());
