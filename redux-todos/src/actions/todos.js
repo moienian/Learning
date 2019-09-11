@@ -1,5 +1,7 @@
+import uuid from "uuid";
+
 export const addTodo = text => ({
   type: "ADD_TODO",
-  id: 1,
+  id: uuid(),
   text
 });
