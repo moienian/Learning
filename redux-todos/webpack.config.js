@@ -8,6 +8,15 @@ module.exports = {
   },
   mode: "development",
   watch: true,
+  module: {
+    rules: [
+      {
+        loader: "babel-loader",
+        test: /\.js$/,
+        exclude: /node_modules/
+      }
+    ]
+  },
   devServer: {
     contentBase: path.join(__dirname, "public"),
     watchContentBase: true,
