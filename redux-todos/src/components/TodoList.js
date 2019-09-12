@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 import Todo from "./Todo";
 
 const TodoList = ({ todos }) => (
@@ -10,9 +9,4 @@ const TodoList = ({ todos }) => (
   </ul>
 );
 
-const mapStateToProps = state => {
-  return {
-    todos: state
-  };
-};
-export default connect(mapStateToProps)(TodoList);
+export default TodoList;
