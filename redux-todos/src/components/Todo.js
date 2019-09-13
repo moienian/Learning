@@ -1,5 +1,5 @@
 import React from "react";
 
-const Todo = todo => <li>{todo.text}</li>;
+const Todo = ({ text, onClick }) => <li onClick={onClick}>{text}</li>;
 
 export default Todo;
