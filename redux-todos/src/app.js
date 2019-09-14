@@ -2,16 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store/configureStore";
-import VisibleTodoList from "./components/VisibleTodoList";
-import AddTodo from "./components/AddTodo";
-import Footer from "./components/Footer";
+import App from "./components/App";
 
 const root = document.getElementById("root");
 ReactDOM.render(
   <Provider store={store}>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
+    <App />
   </Provider>,
   root
 );
