@@ -16,15 +16,13 @@ const getVisibleTodos = (todos, filter) => {
   }
 };
 
-const mapStateToProps = state => {
-  return {
-    todos: getVisibleTodos(state.todos, state.visibilityFilter)
-  };
-};
-
-const mapDispatchToProps = dispatch => ({
-  toggleTodo: id => dispatch(toggleTodo(id))
+const mapStateToProps = state => ({
+  todos: getVisibleTodos(state.todos.present, state.visibilityFilter)
 });
+
+const mapDispatchToProps = {
+  onTodoClick: toggleTodo
+};
 export default connect(
   mapStateToProps,
   mapDispatchToProps
