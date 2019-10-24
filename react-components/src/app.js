@@ -8,7 +8,7 @@ const App = () => {
     title: "Favorite Footware",
     contents: "Flipflops are the best"
   };
-  return <Accordion items={[hats, footware]} />;
+  return <Accordion multiple items={[hats, footware]} />;
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
