@@ -1,7 +1,25 @@
 import React from "react";
 
+/* hooks */
+
+// function Accordion({ items }) {
+//   const [openIndex, setOpenIndex] = React.useState(0);
+//   return (
+//     <div>
+//       {items.map((item, index) => {
+//         return (
+//           <div key={item.title}>
+//             <button onClick={() => setOpenIndex(index)}>{item.title}</button>
+//             {index === openIndex ? <div>{item.contents}</div> : null}
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// }
+
 class Accordion extends React.Component {
-  state = { openIndexes: [] };
+  state = { openIndexes: [0] };
   addOpenIndex = index =>
     this.setState(state => {
       if (this.props.multiple) {
